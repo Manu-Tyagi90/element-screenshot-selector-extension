@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Element Screenshot Selector",
+  "version": "1.1",
+  "description": "Select any element and save it as an image.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_title": "Capture Element as Image",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["html2canvas.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
